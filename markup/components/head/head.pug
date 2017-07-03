@@ -1,12 +1,11 @@
-mixin head(data)
-
-    include styles/styles
-
+mixin head(title)
     meta(charset="utf-8")
-    title #{data.title}
-    meta(content="", name="description")
-    meta(content="", name="keywords")
-    meta(content="telephone=no", name="format-detection")
-
+    title= title
+    //meta(content="", name="description")
+    //meta(content="", name="keywords")
+    //meta(content="telephone=no", name="format-detection")
     link(rel="icon" type="image/x-icon" href="favicon.ico")
-    +styles()
+
+    link(href='%=static=%libs/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(href='%=static=%libs/owl/assets/owl.carousel%=hash=%%=min=%.css', rel='stylesheet')
+    link(href='%=static=%css/main%=hash=%%=min=%.css' rel='stylesheet' type='text/css')

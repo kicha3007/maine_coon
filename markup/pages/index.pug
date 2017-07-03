@@ -7,14 +7,23 @@ html(lang="ru")
 
 
     head
-        +head(head.defaults)
+        +head(main)
     body
-        .wrapper sdgfsdfgsdfgdfsgsfd
+        .wrapper
             //+header()
             section.content
                 aside.sidebar
                 main.main-content
-                //+breadcrumbs(breadcrumbs.index)
+                    .home-items-box.home-items-box_white
+                        .container
+                            .row
+                                .col-md-8
+                                        .h1 акции
+
+                                .col-md-4
+                                        .h1 новинки
+
+
 
         .footer
             +footer()
