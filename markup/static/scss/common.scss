@@ -1,0 +1,56 @@
+
+$footer_height: 60px;
+$container_width: 1256px;
+$placeholder-color: blue;
+
+/******************* Основные стили *******************/
+
+.container {
+    width: $container_width;
+    padding: 0 5px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:link, 
+a:visited, 
+a:hover, 
+a:active {
+    text-decoration: none;
+}
+
+input {
+    @include placeholder(turquoise)
+}
+
+/******************* Прижатый футер *******************/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-width: $container_width;
+    font-family: "#", sans-serif;
+    color: black;
+    //background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%);
+    font-size: 16px;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: $footer-height;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        display: block;
+        height: $footer-height;
+    }
+}

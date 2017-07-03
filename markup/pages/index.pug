@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+    include ../components/footer/scripts/scripts
+    include ../components/head/head
+    include ../components/footer/footer
+    include ../components/menu/menu
+
+
+    head
+        +head(head.defaults)
+    body
+        .wrapper sdgfsdfgsdfgdfsgsfd
+            //+header()
+            section.content
+                aside.sidebar
+                main.main-content
+                //+breadcrumbs(breadcrumbs.index)
+
+        .footer
+            +footer()
+
+        +scripts()
