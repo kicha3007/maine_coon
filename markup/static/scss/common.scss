@@ -1,14 +1,17 @@
-
 $footer_height: 60px;
 $container_width: 1256px;
 $placeholder-color: blue;
 
 /******************* Основные стили *******************/
 
-.container {
+.wrapper {
+    background: url(../img/general/texture.jpg) center;
+}
+
+/*.container {
     width: $container_width;
     padding: 0 5px;
-}
+}*/
 
 * {
     -webkit-box-sizing: border-box;
@@ -29,6 +32,22 @@ input {
 
 /******************* Прижатый футер *******************/
 
+html {
+    font-size: 16px;
+    @include desktop {
+        font-size: 16px;
+    }
+    @include laptop {
+        font-size: 15px;
+    }
+    @include tablets {
+        font-size: 14px;
+    }
+    @include phones {
+        font-size: 13px;
+    }
+}
+
 html,
 body {
     width: 100%;
@@ -36,11 +55,8 @@ body {
 }
 
 body {
-    min-width: $container_width;
     font-family: "#", sans-serif;
     color: black;
-    //background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%);
-    font-size: 16px;
 }
 
 .wrapper {
@@ -54,3 +70,5 @@ body {
         height: $footer-height;
     }
 }
+
+

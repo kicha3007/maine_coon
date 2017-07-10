@@ -1,0 +1,11 @@
+mixin header(data)
+    include ../nav/nav
+    header.header.media-test
+        .container
+            .row
+                .col-xs-2
+                    a(href="#").logo
+                        img(src="%=static=%img/general/logo.png")
+                .col-xs-10.hidden-xs
+                    +nav()
+

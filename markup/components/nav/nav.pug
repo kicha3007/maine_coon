@@ -1,17 +1,13 @@
-mixin nav (data, name)
-    -
-        var items =  {
-        "href": "Пункт4",
-        "href2": "Пункт2",
-        "href3": "Пункт3"
-        }
-
-    ul.nav__list&attributes(attributes)
-            each item in data.items
-                li(class=((item.href == "index.html") ? "active" : ""))
-                    a(href= item.href) #{item.text}
-                        if (data.dropdown == true)
-                        ul.nav__dropdown&attributes(attributes)
-                            each item in data.items
-                                li(class=((item.href == "index.html") ? "active" : ""))
-                                    a(href= item.href) #{item.text}
+mixin nav()
+    nav.nav
+        ul.nav__list
+            li.active
+                a(href="index.html") Главная
+            li
+                a(href="#") О нас
+            li
+                a(href="#") Каталог
+            li
+                a(href="#") Информация
+            li
+                a(href="#") Контакты

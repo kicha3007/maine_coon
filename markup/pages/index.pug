@@ -1,31 +1,22 @@
 doctype html
 html(lang="ru")
-    include ../components/footer/scripts/scripts
     include ../components/head/head
     include ../components/footer/footer
     include ../components/menu/menu
+    include ../components/header/header
+
 
 
     head
         +head(main)
     body
         .wrapper
-            //+header()
+            +header()
             section.content
-                aside.sidebar
                 main.main-content
-                    .home-items-box.home-items-box_white
-                        .container
-                            .row
-                                .col-md-8
-                                        .h1 акции
 
-                                .col-md-4
-                                        .h1 новинки
 
 
 
         .footer
             +footer()
-
-        +scripts()
